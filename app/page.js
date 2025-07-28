@@ -1,5 +1,5 @@
-"use client";
-import { useState } from "react";
+"use client"; //mark as client component
+import { useState } from "react"; // Import useState hook from React to manage component state
 
 const faqs = [ //array to store faq questions and anwsers
   {
