@@ -46,7 +46,7 @@ export default function FAQ() {    // FAQ component
 
   return (
     <div className="h-screen bg-white md:bg-[#BDFF00] flex items-center justify-center px-4 py12 " >
-      <div className="bg-[#ffffff] rounded-xl p-8 shadow-md max-w-3xl w-full">     
+      <div className="bg-[#ffffff] rounded-xl p-8 shadow-md  w-full max-w-7xl">     
         <h2 className="text-center font-semibold text-[18px] mb-1 text-[#1f2937] ">
           Frequently Asked Questions
         </h2>
