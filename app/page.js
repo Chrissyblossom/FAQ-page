@@ -45,16 +45,16 @@ export default function FAQ() {    // FAQ component
   }
 
   return (
-    <div className="max-w-3xl mx-auto p-6 rounded-xl my-12" style  = {{backgroundColor: "#BDFF00"}}>
-      <div className="bg-white rounded-xl p-8 shadow-md">     
-        <h2 className="text-center font-semibold text-lg mb-1">
+    <div className="h-screen bg-white md:bg-[#BDFF00] flex items-center justify-center px-4 py12 " >
+      <div className="bg-[#ffffff] rounded-xl p-8 shadow-md max-w-3xl w-full">     
+        <h2 className="text-center font-semibold text-[18px] mb-1 text-[#1f2937] ">
           Frequently Asked Questions
         </h2>
-        <p className="text-center text-green-700 font-semibold mb-6 flex justify-center items-center gap-2"> 
+        <p className="text-center text-[#8DB712] font-semibold mb-6 flex justify-center items-center gap-2"> 
           Have any questions? we’re here to help <span className="text-2xl">😀</span>
         </p>
 
-        <div className="divide-y divide-gray-200"> 
+        <div className="divide-y divide-[#e5e7eb]"> 
           {faqs.map((faq, i) => ( 
             <div key={i} className="py-4"> 
               <button   
@@ -63,19 +63,20 @@ export default function FAQ() {    // FAQ component
                 aria-expanded={openIndex === i}
                 aria-controls={`faq-answer-${i}`}  //aria tags indicate if its open and controls the answer section
               >
-                <span className="font-semibold text-gray-800 w-[90%]">{faq.question}</span>
+                <span className="font-medium text-[#1f2937] w-[90%]">{faq.question}</span>
                 <span className="flex items-center justify-center w-8 h-8 rounded-full border border-gray-400">
+
                   {openIndex === i ? (
-                    <MinusIcon className="w-5 h-5 text-gray-600" /> //if faq is open show minus sign
+                    <MinusIcon className="w-5 h-5 text-[#4b5563]" /> //if faq is open show minus sign
                   ) : (
-                    <PlusIcon className="w-5 h-5 text-gray-600" />
+                    <PlusIcon className="w-5 h-5 text-[#4b5563]" />
                   )}
                 </span>
               </button>
               {openIndex === i && ( //if item open show the answer
                 <p
                   id={`faq-answer-${i}`}
-                  className="mt-2 text-gray-500 text-sm max-w-[90%]"
+                  className="mt-2 text-[#6b7280] text-sm max-w-[90%]"
                 >
                   {faq.answer}
                 </p>
